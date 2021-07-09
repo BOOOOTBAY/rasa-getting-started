@@ -1,1 +1,4 @@
 rasa
+dataclasses-json
+jieba
+transformers
