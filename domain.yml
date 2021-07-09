@@ -1,0 +1,64 @@
+intents:
+  - greet
+  - goodbye
+  - inform
+  - inform_keyword
+  - ask_story
+  - story_keyword
+  - ask_weather
+
+slots:
+  address:
+    type: text
+  date-time:
+    type: text
+  matches:
+    type: unfeaturized
+  story_keyword:
+    type: text
+
+actions:
+  - utter_greet
+  - utter_ask_address
+  - utter_ask_date-time
+  - utter_working_on_it
+  - action_report_weather
+  - utter_report_weather
+  - utter_goodbye
+
+responses:
+  utter_greet:
+    - text: "您好，我是BotBay ～"
+    - text: "您好，我是BotBay，您的专属私人助理"
+    - text: "你好啊"
+
+  utter_working_on_it:
+    - text: "正在查询中，请稍后 ..."
+
+  utter_goodbye:
+    - text: "再见！~~"
+    - text: "咱们江湖有缘再见"
+    - text: "古德拜 ～"
+    - text: "good bye"
+
+  utter_ask_address:
+    - text: "哪里呢？"
+
+  utter_ask_date-time:
+    - text: "什么时候？"
+
+  utter_report_weather:
+    - text: "{matches}"
+
+  utter_default:
+    - text: "系统不明白您说的话"
+
+forms:
+  weather_form:
+    ignored_intents:
+    - chitchat
+    required_slots:
+      address:
+      - type: address
+      date-time:
+      - type: date-time

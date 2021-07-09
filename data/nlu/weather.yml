@@ -1,0 +1,6 @@
+nlu:
+- intent: ask_weather
+  examples: | 
+    - 帮我查一下天气
+    - 查一下天气
+    - 天气

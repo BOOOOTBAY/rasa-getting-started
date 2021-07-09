@@ -1,0 +1,10 @@
+version: "2.0"
+nlu: 
+- intent: alarm_clock
+  examples: |
+    - 我要定个闹钟
+    - 定个闹钟
+    - 提醒我
+    - [晚上八点](time)提醒我[睡觉](alarm_clock_content)
+    - [明天早上九点](time)提醒我[起床](alarm_clock_content)
+    - [晚上八点](time)提醒我[睡觉](alarm_clock_content)

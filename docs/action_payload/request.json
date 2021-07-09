@@ -1,0 +1,104 @@
+{
+    "next_action": "string",
+    "sender_id": "string",
+    "tracker": {
+      "conversation_id": "default",
+      "slots": {
+        "slot_name": "slot_value"
+      },
+      "latest_message": {
+        "entities": [
+          {
+            "start": 0,
+            "end": 0,
+            "value": "string",
+            "entity": "string",
+            "confidence": 0
+          }
+        ],
+        "intent": {
+          "confidence": 0.6323,
+          "name": "greet"
+        },
+        "intent_ranking": [
+          {
+            "confidence": 0.6323,
+            "name": "greet"
+          }
+        ],
+        "text": "Hello!"
+      },
+      "latest_event_time": 1537645578.314389,
+      "followup_action": "string",
+      "paused": false,
+      "events": [
+        {
+          "event": "slot",
+          "timestamp": 1559744410
+        }
+      ],
+      "latest_input_channel": "rest",
+      "latest_action_name": "action_listen",
+      "latest_action": {
+        "action_name": "string",
+        "action_text": "string"
+      },
+      "active_loop": {
+        "name": "restaurant_form"
+      }
+    },
+    "domain": {
+      "config": {
+        "store_entities_as_slots": false
+      },
+      "intents": [
+        {
+          "property1": {
+            "use_entities": true
+          },
+          "property2": {
+            "use_entities": true
+          }
+        }
+      ],
+      "entities": [
+        "person",
+        "location"
+      ],
+      "slots": {
+        "property1": {
+          "auto_fill": true,
+          "initial_value": "string",
+          "type": "string",
+          "values": [
+            "string"
+          ]
+        },
+        "property2": {
+          "auto_fill": true,
+          "initial_value": "string",
+          "type": "string",
+          "values": [
+            "string"
+          ]
+        }
+      },
+      "responses": {
+        "property1": [
+          {
+            "text": "string"
+          }
+        ],
+        "property2": [
+          {
+            "text": "string"
+          }
+        ]
+      },
+      "actions": [
+        "action_greet",
+        "action_goodbye",
+        "action_listen"
+      ]
+    }
+  }

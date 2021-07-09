@@ -1,0 +1,27 @@
+{
+    "events": [
+      {
+        "event": "slot",
+        "timestamp": 1559744410
+      }
+    ],
+    "responses": [
+      {
+        "text": "string",
+        "buttons": [
+          {
+            "title": "string",
+            "payload": "string"
+          }
+        ],
+        "elements": [],
+        "custom": {},
+        "image": "string",
+        "attachment": "string",
+        "template": "string",
+        "property1": "string",
+        "property2": "string",
+        "response": "string"
+      }
+    ]
+  }
