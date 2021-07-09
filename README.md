@@ -8,6 +8,40 @@
 
 BotBay 刚刚出生，需要大家的共同努力才能够快速成长 ~~
 
+## Quick Start
+
+* clone the repo
+
+```shell
+git clone https://github.com/BOOOOTBAY/rasa-getting-started
+```
+
+* install dependency packages
+
+```shell
+pip install -r requirements.txt
+```
+
+* trian
+
+```shell
+rasa train
+
+# or 
+
+make train
+```
+
+* run the bot & ChatRoom
+
+```shell
+rasa run --port 5003 --credentials credentials.yml \
+  --cors "*" --debug --endpoints endpoints.yml --enable-api
+
+# or
+
+make run
+```
 
 ## Copyright & License
 
