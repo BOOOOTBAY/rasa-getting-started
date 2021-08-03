@@ -1,4 +1,10 @@
 intents:
+  - mood_great
+  - alarm_clock
+  - mood_unhappy
+  - affirm
+  - bot_challenge
+  - deny
   - greet
   - goodbye
   - inform
@@ -6,6 +12,8 @@ intents:
   - ask_story
   - story_keyword
   - ask_weather
+  - ask_weather_with_location
+  - city
 
 slots:
   address:
@@ -53,12 +61,12 @@ responses:
   utter_default:
     - text: "系统不明白您说的话"
 
-forms:
-  weather_form:
-    ignored_intents:
-    - chitchat
-    required_slots:
-      address:
-      - type: address
-      date-time:
-      - type: date-time
+# forms:
+#   weather_form:
+#     ignored_intents:
+#     - chitchat
+#     required_slots:
+#       address:
+#       - type: address
+#       date-time:
+#       - type: date-time

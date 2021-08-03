@@ -1,0 +1,71 @@
+version: "2.0"
+
+# 带有地址的问时间
+stories:
+- story: ask_time_with_city
+  steps:
+  - intent: ask_time
+  - action: action_check_city
+  - action: action_get_time_with_city
+  - action: utter_time
+
+# 带有地址的问时间,但地址不存在
+stories:
+- story: ask_time_with_city
+  steps:
+  - intent: ask_time
+  - action: action_check_city
+  - action: utter_wrong_city
+  - active_loop: city_form
+  - action:
+
+# 问时间但是没给地址
+- story: ask_time_without_city
+  steps:
+  - intent: ask_time
+  - action: quote_form
+  - action: action_get_position
+  - action: action_get_time_with_city
+  - action: utter_time
+
+# 问时间但是没给地址(city_form中应有action_check_city)
+- story: ask_time_without_city
+  steps:
+  - intent: ask_time
+    entities:
+    - address: city
+  - active_loop: city_form
+  - action: action_get_time_with_city
+  - action: utter_time
+
+# 问时间但是没给地址，且打断需求，这个可能不会写，有疑问
+- story: ask_time_without_city
+  steps:
+  - intent: ask_time
+    entities:
+    - address: city
+  - action: quote_form
+  - active_loop: city_form
+  - action: utter_something_else
+
+# 问时间给了地址但模糊，譬如美国
+- story: ask_time_with_ambiguous_address
+  steps:
+  - intent: ask_time
+    entities:
+    - address: city
+  - action: quote_form
+  - active_loop: city_form
+  - action: action_get_time_with_city
+  - action: utter_time
+
+# 问时间给了地址和参考时间
+stories:
+- story: ask_time_with_city_and_reference
+  steps:
+  - intent: ask_time
+  - action: quote_form
+  - action: action_get_time_with_city
+  - action: action_get_time_with_reference
+  - action: action_calculate_relationship
+  - action: utter_time

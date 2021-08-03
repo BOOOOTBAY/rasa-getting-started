@@ -1,6 +1,13 @@
 version: "2.0"
 stories:
-- story: weather
+- story: 直接询问哪里的天气
   steps:
   - intent: ask_weather
-  - action: weather_form
+  - action: utter_ask_address
+  - intent: city
+  - action: action_report_weather
+
+- story: 询问当中没有包含城市信息
+  steps:
+  - intent: ask_weather_with_location
+  - action: action_report_weather

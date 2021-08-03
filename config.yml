@@ -13,7 +13,7 @@ pipeline:
   - name: DIETClassifier
     epochs: 100
     constrain_similarities: true
-    embedding_dim: 30
+    # embedding_dim: 30
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100

@@ -1,5 +1,9 @@
 version: "2.0"
 nlu:
+- intent: city
+  examples: |
+    - [北京](city)
+    - [武汉](city)
 - intent: greet
   examples: |
     - 晚上好
